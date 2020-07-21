@@ -1,5 +1,10 @@
 package _01_introduction_to_encapsulation;
 
-public class EncapsulateTheDataTest {
+import org.junit.Test;
 
+public class EncapsulateTheDataTest {
+@Test
+public void testGettersAndSetters() {
+	
+}
 }
