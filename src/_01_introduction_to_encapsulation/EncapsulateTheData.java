@@ -30,20 +30,49 @@ public class EncapsulateTheData {
 	public static void main(String[] args) {
 		
 	}
-	private Object getVariables(String type) {
-		if(type.equals("int")) {
-			return itemsReceived;
-		}
-		else if(type.equals("float")) {
-			return degreesTurned;
-		}
-		else if(type.equals("String")) {
-			return nomenclature;
+	 void setMemberObj(Object object) {
+		if(object instanceof String) {
+		this.memberObj = new Object();
 		}
 		else {
-			return memberObj;
+			this.memberObj = object;
 		}
 	}
 	
-	private 
+	 void setItemsReceived(int v) {
+		if(v>=0) {
+		this.itemsReceived = v;
+		}
+		else {
+			this.itemsReceived = 0;
+		}
+	}
+	 void setDegreesTurned(float degrees) {
+		if(degrees>=0&&degrees<=360) {
+		this.degreesTurned = degrees;
+		}
+		else {
+			throw new IllegalStateException();
+		}
+	}
+	 void setNomenclature(String e) {
+		if(e.equals("")) {
+		this.nomenclature = " ";
+		}
+		else {
+			this.nomenclature = e;
+		}
+	}
+ Object getMemberObj() {
+			return memberObj;
+	}
+int getItemsRecieved() {
+		return itemsReceived;
+}
+ Object getDegreesTurned() {
+		return degreesTurned;
+}
+Object getNomenclature() {
+		return nomenclature;
+}
 }
