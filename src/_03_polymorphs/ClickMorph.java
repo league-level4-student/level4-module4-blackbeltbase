@@ -10,7 +10,7 @@ import javax.swing.JOptionPane;
 public class ClickMorph extends Polymorph{
 
 	ClickMorph(int x, int y, int width, int height) {
-		super(x, y, width, height, true, "");
+		super(x, y, width, height, false, "");
 		// TODO Auto-generated constructor stub
 	}
 
